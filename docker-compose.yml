@@ -6,6 +6,8 @@ services:
       dockerfile: Dockerfile
     image: ts-express
     container_name: ts-express
+    env_file:
+      - .env
     ports:
       - "9001:9001"
     volumes:

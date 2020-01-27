@@ -5,7 +5,7 @@ USER root
 ARG NODE_ENV
 RUN echo $NODE_ENV
 
-RUN apk add --update --no-cache dumb-init su-exec ffmpeg
+RUN apk add --update --no-cache dumb-init su-exec
 
 RUN addgroup -S dockerapps && \
     adduser -S dockerapp -G dockerapps && \
@@ -19,7 +19,12 @@ USER dockerapp
 # in dev, the copy will be shadowed when we mount over the entire `/workspace` folder
 COPY ./package.json .
 COPY ./package-lock.json .
-RUN npm install
 COPY ./src /workspace/src
+COPY ./run /workspace/run
 
-CMD ["npm", "run", "start"]
+USER root
+
+RUN chmod +x ./run/entrypoint.sh
+
+ENTRYPOINT [ "dumb-init", "--"]
+CMD [ "./run/entrypoint.sh" ]
