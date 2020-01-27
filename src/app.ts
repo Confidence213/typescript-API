@@ -2,12 +2,16 @@ import express, { Application } from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 
+/** Routes */
+import ApiRoute from "./routes/ApiRoute";
+
 class App {
   public app: Application;
 
   constructor() {
     this.app = express();
     this.config();
+    this.routes();
   }
 
   private config() {
@@ -19,6 +23,10 @@ class App {
 
     //Enables cors
     this.app.use(cors());
+  }
+
+  private routes() {
+    this.app.use("/api", ApiRoute);
   }
 }
 
