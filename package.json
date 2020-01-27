@@ -4,7 +4,9 @@
   "description": "Typescript express API boilterplate",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon"
+    "dev": "nodemon",
+    "build": "rm -rf ./build/ && tsc",
+    "start": "npm run build && node build/server.js"
   },
   "repository": {
     "type": "git",
