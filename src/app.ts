@@ -1,6 +1,7 @@
 import express, { Application } from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import helmet from "helmet";
 
 /** Routes */
 import ApiRoute from "./routes/ApiRoute";
@@ -23,6 +24,8 @@ class App {
 
     //Enables cors
     this.app.use(cors());
+
+    this.app.use(helmet());
   }
 
   private routes() {

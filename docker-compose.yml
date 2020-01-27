@@ -12,3 +12,22 @@ services:
       - "9001:9001"
     volumes:
       - .:/workspace
+    networks:
+      - net
+  database:
+    image: mysql:5.7
+    container_name: ts-express-db
+    ports:
+      - "33060:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=tsroot
+      - MYSQL_DATABASE=tsexpress
+      - MYSQL_USER=tsusr
+      - MYSQL_PASSWORD=tspwd
+    restart: unless-stopped
+    volumes:
+      - "./mysql:/var/lib/mysql"
+    networks:
+      - net
+networks:
+  net:
