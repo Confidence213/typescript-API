@@ -71,6 +71,12 @@ class AuthController {
       token: token
     });
   }
+
+  public me(req: Request, res: Response) {
+    res.json({
+      data: res.locals.user
+    });
+  }
 }
 
 export default new AuthController();
