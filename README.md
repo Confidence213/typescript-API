@@ -1,4 +1,6 @@
-# Awesome Project Build with TypeORM
+# Expressjs Typescript API boilerplate
+
+[![Build Status](https://travis-ci.org/achmadfatoni/typescript-express-API-boilterplace.svg?branch=master)](https://travis-ci.org/achmadfatoni/typescript-express-API-boilterplace)
 
 Steps to run this project:
 
