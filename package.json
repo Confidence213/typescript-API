@@ -7,9 +7,7 @@
     "dev": "nodemon",
     "build": "rm -rf ./build/ && tsc",
     "start": "ts-node src/index.ts",
-    "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run",
-    "migration:create": "ts-node ./node_modules/typeorm/cli.js migration:create -n",
-    "migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert"
+    "typeorm:cli": "ts-node ./node_modules/typeorm/cli -f ./src/config/ormconfig.ts"
   },
   "repository": {
     "type": "git",
