@@ -7,7 +7,8 @@
     "dev": "nodemon",
     "build": "rm -rf ./build/ && tsc",
     "start": "ts-node src/index.ts",
-    "typeorm:cli": "ts-node ./node_modules/typeorm/cli -f ./src/config/ormconfig.ts"
+    "typeorm:cli": "ts-node ./node_modules/typeorm/cli -f ./src/config/ormconfig.ts",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -41,8 +42,13 @@
     "@types/body-parser": "^1.17.1",
     "@types/cors": "^2.8.6",
     "@types/express": "^4.17.2",
+    "@types/jest": "^25.1.0",
     "@types/node": "^8.0.29",
+    "@types/supertest": "^2.0.8",
+    "jest": "^25.1.0",
     "nodemon": "^2.0.2",
+    "supertest": "^4.0.2",
+    "ts-jest": "^25.0.0",
     "ts-node": "3.3.0",
     "typescript": "3.3.3333"
   }
