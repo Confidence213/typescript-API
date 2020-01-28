@@ -26,7 +26,7 @@ services:
       - MYSQL_PASSWORD=tspwd
     restart: unless-stopped
     volumes:
-      - "./mysql:/var/lib/mysql"
+      - "~/docker/ts-express/mysql:/var/lib/mysql"
     networks:
       - net
 networks:

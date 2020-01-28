@@ -5,6 +5,7 @@ import helmet from "helmet";
 
 /** Routes */
 import ApiRoute from "./routes/ApiRoute";
+import auth from "./routes/auth";
 
 class App {
   public app: Application;
@@ -30,6 +31,7 @@ class App {
 
   private routes() {
     this.app.use("/api", ApiRoute);
+    this.app.use("/api/auth", auth);
   }
 }
 

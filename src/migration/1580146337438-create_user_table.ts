@@ -10,15 +10,28 @@ export class createUserTable1580146337438 implements MigrationInterface {
           {
             name: "id",
             type: "int",
-            isPrimary: true
+            isPrimary: true,
+            isGenerated: true,
+            generationStrategy: "increment"
           },
           {
             name: "username",
-            type: "varchar(50)"
+            type: "varchar(50)",
+            isUnique: true
           },
           {
             name: "password",
             type: "varchar"
+          },
+          {
+            default: "now()",
+            name: "createdAt",
+            type: "timestamp"
+          },
+          {
+            default: "now()",
+            name: "updatedAt",
+            type: "timestamp"
           }
         ]
       })
