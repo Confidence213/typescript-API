@@ -2,11 +2,11 @@
   "name": "typescript-express-docker-boilerplate",
   "version": "1.0.0",
   "description": "Typescript express API boilterplate",
-  "main": "index.js",
+  "main": "build/server.js",
   "scripts": {
     "dev": "nodemon",
     "build": "rm -rf ./build/ && tsc",
-    "start": "ts-node src/index.ts",
+    "start": "node build/server.ts",
     "typeorm:cli": "ts-node ./node_modules/typeorm/cli -f ./src/config/ormconfig.ts",
     "test": "jest"
   },
