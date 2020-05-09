@@ -1,6 +1,6 @@
 # Expressjs Typescript API boilerplate
 
-[![Build Status](https://travis-ci.org/achmadfatoni/typescript-express-API-boilterplace.svg?branch=master)](https://travis-ci.org/achmadfatoni/typescript-express-API-boilterplate)
+[![Build Status](https://travis-ci.org/achmadfatoni/typescript-express-API-boilterplate.svg?branch=master)](https://travis-ci.org/achmadfatoni/typescript-express-API-boilterplate)
 
 Steps to run this project:
 
